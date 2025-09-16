@@ -2,11 +2,18 @@ const api = angular.module('meuModulo', [])
 
 api.controller('meuController', function($scope){
 
-    $scope.name = "Pedro Lucas";
-    $scope.profissao = "Desenvolvedor"
+    $scope.lampada = 'apagada'
 
-    $scope.dizOla = function() {
-        return "Olá mundo!"
+    $scope.acenderLampada = function() {
+        $scope.lampada = 'acesa'
+    }
+
+    $scope.apagarLampada = function() {
+        $scope.lampada = 'apagada'
+    }
+
+    $scope.statusLampada = function() {
+        return 'A lampada está ' + $scope.lampada
     }
 
 })

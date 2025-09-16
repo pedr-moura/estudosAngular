@@ -12,12 +12,20 @@
 <body>  
 
     <div ng-controller="meuController"> 
-     {{name}}
-        <br>
-     {{profissao}}
-        <br>
-     {{dizOla()}}
 
+        <h1>Interpolação com Lampadas</h1>
+
+        <img src="lampada-{{lampada}}.png" alt="" srcset="">
+<br><br>
+        <button ng-click="acenderLampada()">
+            Acender
+        </button>
+
+        <button ng-click="apagarLampada()">
+            Apagar
+        </button>
+
+        <p>{{statusLampada()}}</p>
     </div>
     
 </body>
