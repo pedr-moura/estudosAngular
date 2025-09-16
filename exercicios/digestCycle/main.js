@@ -1,6 +1,6 @@
 const api = angular.module('meuModulo', [])
 
-api.controller('meuController', function($scope){
+api.controller('meuController', function($scope, $timeout){
 
     $scope.mudarNumeroParaUm = 0
 
@@ -9,12 +9,10 @@ api.controller('meuController', function($scope){
     }
 
     $scope.mudandoNumeroParaUm = function() {
-        setTimeout(function(){
+        $timeout(function(){ //teste com timeout nativo
 
-            $scope.$apply(function(){ //apply roda sem considerar erros
                 $scope.mudarNumeroParaUm = 1
                 console.log("Variavel mudou para um");
-            })
            
         }, 2000)
         
