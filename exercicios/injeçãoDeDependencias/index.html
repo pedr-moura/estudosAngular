@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="meuModulo">
+       <!-- MODULO ANGULAR -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default para estudos com Angular</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="./main.js"></script>
+</head>
+<body>  
+
+    <div ng-controller="meuController"> 
+
+        <h1>Injeção de Dependencias</h1>
+
+        <h4>{{parms}}</h4> 
+        <!-- parametros GET -->
+
+        <button ng-click="transformarEmMaiusculo()">
+            Maiusculo
+        </button>
+
+
+        <p style="font-size: 2.4rem;">{{plataforma}}</p>
+    </div>
+    
+</body>
+</html>
